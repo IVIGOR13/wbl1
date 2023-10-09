@@ -14,27 +14,27 @@ func main() {
 	index, result := slices.BinarySearch[[]int, int](arr, val)
 	fmt.Printf("find %d: result: index = %d finded = %t\n", val, index, result)
 
-	index, result = binarySearch(arr, val)
-	fmt.Printf("find %d: result: index = %d finded = %t\n", val, index, result)
+	// index, result = binarySearch(arr, val)
+	// fmt.Printf("find %d: result: index = %d finded = %t\n", val, index, result)
 }
 
-func binarySearch(arr []int, num int) (int, bool) {
+// func binarySearch(arr []int, num int) (int, bool) {
 
-	l, r := 0, len(arr)-1
+// 	l, r := 0, len(arr)-1
 
-	for l <= r {
-		mid := (l + r) / 2
+// 	for l <= r {
+// 		mid := (l + r) / 2
 
-		if arr[mid] < num {
-			l = mid + 1
-		} else {
-			r = mid - 1
-		}
-	}
+// 		if arr[mid] < num {
+// 			l = mid + 1
+// 		} else {
+// 			r = mid - 1
+// 		}
+// 	}
 
-	if l == len(arr) || arr[l] != num {
-		return l, false
-	}
+// 	if l == len(arr) || arr[l] != num {
+// 		return l, false
+// 	}
 
-	return r + 1, true
-}
+// 	return r + 1, true
+// }
