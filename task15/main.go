@@ -22,20 +22,7 @@ var justString string
 func someFunc() {
 	str := createHugeString(1 << 10)
 
-	strLen := 100
-
-	builder := strings.Builder{}
-	builder.Grow(strLen)
-	for _, v := range []byte(str) {
-		builder.WriteByte(v)
-	}
-	justString = builder.String()
-
-	// justBytes := make([]byte, strLen)
-	// for i, v := range []byte(str) {
-	// 	justBytes[i] = v
-	// }
-	// justString = string(justBytes)
+	justString = strings.Clone(str[:100])
 }
 
 func main() {
