@@ -16,11 +16,12 @@ func Reverse(s string) string {
 }
 
 func main() {
-	s := "Hello world! 世界"
-	s = Reverse(s)
-	fmt.Println(s)
-
-	s = "Ångström"
-	s = Reverse(s)
-	fmt.Println(s)
+	inputs := []string{
+		"Hello world! 世界",
+		"Ångström",
+		"главрыба",
+	}
+	for _, s := range inputs {
+		fmt.Printf("'%s' -> '%s'\n", s, Reverse(s))
+	}
 }
